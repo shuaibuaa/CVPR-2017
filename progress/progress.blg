@@ -1,3 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: progress.aux
 The style file: ieeetr.bst
-Database file #1: mybibtex.bib
+I couldn't open database file mybibtex.bib
+---line 13 of file progress.aux
+ : \bibdata{mybibtex
+ :                  }
+I'm skipping whatever remains of this command
+I found no database files---while reading file progress.aux
+Warning--I didn't find a database entry for "DBLP:journals/corr/WilsonHSX15"
+(There were 2 error messages)

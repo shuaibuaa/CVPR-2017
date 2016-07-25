@@ -7,6 +7,9 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{bm}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{color}
 
 \setcounter{page}{1}
 \setlength{\parindent}{0pt}
@@ -20,7 +23,7 @@
 \section{Introduction}
 
 \subsection{Related Works}
-Wilson et al. \cite{DBLP:journals/corr/WilsonHSX15} combined the non-parametric flexibility of kernel methods with the structural properties of deep neural networks.
+Wilson et al. combined the non-parametric flexibility of kernel methods with the structural properties of deep neural networks.
 
 %\cite{DBLP:conf/aistats/PandeyD14} 
 
@@ -50,11 +53,11 @@ E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^{N} {\|\mathbf{y}(\mathbf{x}_n, \mathbf{w
 \subsection{Kernelized Neural Network}
 
 %----------------------------------@ July 24---------------------------------------
+\color[rgb]{0.5,0.5,0.5}
 \newpage
-\par\par\LARGE Progress @ July 24\normalsize
+\LARGE Progress @ July 24\normalsize\vspace{3ex}
 
 \subsubsection{Nonparametric representation}
-
 
 \par \textbf{Single-layer neural network}\\
 
@@ -134,20 +137,125 @@ y_n = h^{(2)} \left( \sum\limits_{j=1}^K w_j^{(2)} k_2( \bm{\alpha}_j^{(2)}, \le
 \right])
 \right) 
 \end{equation}
+\color[rgb]{0,0,0}
 
-%----------------------------------@ July 25---------------------------------------
+
+%----------------------------------@ July 26---------------------------------------
 \newpage
-\par\par\LARGE Progress @ July 25\normalsize
+\LARGE Progress @ July 26\normalsize\vspace{3ex}
 
-We aim to find a set of components 
-\subsubsection{Single-layer Neural Network}
-\par \textbf{Parametric neural network}\\
+\par We aim to find a set of components $F = \{f_i\}_{i=1}^{K}$ which are fucntions in a RKHS $\mathcal{H}$ induced by a kernel function $k(\cdot, \cdot)$. Given $k(\cdot, \cdot)$ and the input space $\mathcal{X} = \mathbb{R}^D$, a reproducing kernel feature map $\phi: \mathcal{X}\rightarrow\mathbb{R}^\mathcal{X}$ can be defined as $\phi(\mathbf{x}) = k(\mathbf{x}, \cdot)$ and the inner product $\phi(\mathbf{x})^{T}\phi(\mathbf{y})$ can be computed as $k(\mathbf{x}, \mathbf{y})$ via the kernel trick.
+Firstly, we define the kernel neural network problem
+
+\begin{equation}
+\min\sum_{n=1}^{N}\|y_n - t_n\|^2,
+\end{equation}
+
+where $t_n$ is the lable of the sample $\mathbf{x}_n$, and $y_n$ is the output of the kernel neural network with input sample $\mathbf{x}_n$. Then we talk the computation of $y_n$ in parametric form and non-parametric form separately.
+
+\subsubsection{Parametric Representation}
+Under the parametric representation, the functions $f$ take a parametric form which is independent of data: $\{f|f = \phi(\mathbf{a}), \mathbf{a}\in \mathbb{R}^D\}$. So we can compute $f(\mathbf{x})$ as $f(\mathbf{x}) = \phi(\mathbf{a})^T \phi(\mathbf{x}) = k(\mathbf{a}, \mathbf{x})$.\\
+
+For single-layer neural network we have:
+
+\begin{equation}
+\phi(\mathbf{x}) = k(\mathbf{x},\cdot)
+\end{equation}
+
+\begin{equation}
+f_i = \phi(\mathbf{a}_i) = k(\mathbf{a}_i,\cdot)
+\end{equation}
+
+\begin{equation}
+f_i(\mathbf{x}) = f_i(\cdot)\phi(\mathbf{x}) = k(\mathbf{a}_i,\cdot) k(\mathbf{x},\cdot) = k(\mathbf{a}_i,\mathbf{x})
+\end{equation}
+
+\begin{equation}
+y = \sum\limits_{i=1}^K w_i f_i(\mathbf{x}) = \sum\limits_{i=1}^K w_i k(\mathbf{a}_i,\mathbf{x})
+\end{equation}
+
+And for multi-layer neuarl network we have:
+
+\begin{equation}
+\phi^{(2)}(\mathbf{x}^{(2)}) = k^{(2)}(\mathbf{x}^{(2)},\cdot)
+\end{equation}
+
+\begin{equation}
+f_i^{(2)}  = \phi^{(2)}(\mathbf{a}_i^{(2)}) = k^{(2)} (\mathbf{a}_i^{(2)},\cdot)
+\end{equation}
+
+\begin{equation}
+f_i^{(2)}(\mathbf{x}^{(2)}) = f^{(2)}(\cdot)\phi^{(2)}(\mathbf{x}^{(2)}) = k^{(2)}(\mathbf{a}_i^{(2)},\cdot) k^{(2)}(\mathbf{x}^{(2)},\cdot) = k^{(2)}(\mathbf{a}_i^{(2)},\mathbf{x}^{(2)})
+\end{equation}
+
+\begin{equation}
+y = \sum\limits_{i=1}^K w_i^{(2)} f_i^{(2)}(\mathbf{x}^{(2)}) = \sum\limits_{i=1}^K w_i^{(2)} k^{(2)}(\mathbf{a}_i^{(2)},\mathbf{x}^{(2)})
+\end{equation}
+
+\begin{equation}
+\mathbf{x}^{(2)} = \left[ \begin{array}{c}
+  k(\mathbf{a}_1,\mathbf{x})\\
+  .\\
+  .\\
+  .\\
+  k(\mathbf{a}_K,\mathbf{x})\\
+\end{array}
+  \right]
+\end{equation}
 
 
+\subsubsection{Non-parametric Representation}
+Under the non-parametric representation, the functions $f$ admit a non-parametric form which is data dependent: $\{f|f = \sum_{i=1}^{N} \alpha_i k(\mathbf{x}_i, \cdot), \alpha_i\in\mathbb{R}\}$. So we can compute $f(\mathbf{x})$ as $f(\mathbf{x}) = \sum_{i=1}^{N}\alpha_i k(\mathbf{x}_i, \mathbf{x})$.\\
 
+For single-layer neural network we have:
 
-\newpage
-\bibliographystyle{ieeetr}
-\bibliography{mybibtex}
+\begin{equation}
+\phi(\mathbf{x}) = k(\mathbf{x},\cdot)
+\end{equation}
+
+\begin{equation}
+f_i = \sum\limits_{i=1}^N \alpha_{ji} k(\mathbf{x}_i,\cdot)
+\end{equation}
+
+\begin{equation}
+f_i(\mathbf{x}) = f_i(\cdot)\phi(\mathbf{x}) = \sum\limits_{i=1}^N \alpha_{ji} k(\mathbf{x}_i,\cdot) k(\mathbf{x}, \cdot) = \sum\limits_{i=1}^N \alpha_{ji} k(\mathbf{x}_i,\mathbf{x})
+\end{equation}
+
+\begin{equation}
+y = \sum\limits_{i=1}^K w_i f_i(\mathbf{x}) = \sum\limits_{i=1}^K w_i \sum\limits_{i=1}^N \alpha_{ji} k(\mathbf{x}_i,\mathbf{x})
+\end{equation}
+
+And for multi-layer neural network we have:
+
+\begin{equation}
+\phi^{(2)}(\mathbf{x}^{(2)}) = k^{(2)}(\mathbf{x}^{(2)},\cdot)
+\end{equation}
+
+\begin{equation}
+f_i^{(2)} = \sum\limits_{i=1}^N \alpha_{ji}^{(2)} k^{(2)}(\mathbf{x}_i^{(2)},\cdot)
+\end{equation}
+
+\begin{equation}
+f_i^{(2)}(\mathbf{x}^{(2)}) = f_i^{(2)}(\cdot)\phi^{(2)}(\mathbf{x}^{(2)}) = \sum\limits_{i=1}^N \alpha_{ji}^{(2)} k^{(2)}(\mathbf{x}_i^{(2)},\cdot) k^{(2)}(\mathbf{x}^{(2)}, \cdot) = \sum\limits_{i=1}^N \alpha_{ji}^{(2)} k^{(2)}(\mathbf{x}_i^{(2)},\mathbf{x}^{(2)})
+\end{equation}
+
+\begin{equation}
+y = \sum\limits_{i=1}^K w_i^{(2)} f_i^{(2)}(\mathbf{x}^{(2)}) = \sum\limits_{i=1}^K w_i^{(2)} \sum\limits_{i=1}^N \alpha_{ji}^{(2)} k^{(2)}(\mathbf{x}_i^{(2)},\mathbf{x}^{(2)})
+\end{equation}
+
+\begin{equation}
+\mathbf{x}^{(2)} = \left[ \begin{array}{c}
+  \sum\limits_{i=1}^N \alpha_{1i} k(\mathbf{x}_1,\mathbf{x})\\
+  .\\
+  .\\
+  .\\
+  \sum\limits_{i=1}^N \alpha_{Ki} k(\mathbf{x}_K,\mathbf{x})\\
+\end{array}
+  \right]
+\end{equation}
+
+%\newpage
+%\bibliographystyle{ieeetr}
+%\bibliography{mybibtex}
 
 \end{document}

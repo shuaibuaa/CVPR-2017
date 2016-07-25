@@ -1,13 +1,3 @@
-\begin{thebibliography}{1}
-
-\bibitem{DBLP:journals/corr/WilsonHSX15}
-A.~G. Wilson, Z.~Hu, R.~Salakhutdinov, and E.~P. Xing, ``Deep kernel
-  learning,'' {\em CoRR}, vol.~abs/1511.02222, 2015.
-
-\bibitem{DBLP:conf/aistats/PandeyD14}
-G.~Pandey and A.~Dukkipati, ``To go deep or wide in learning?,'' in {\em
-  Proceedings of the Seventeenth International Conference on Artificial
-  Intelligence and Statistics, {AISTATS} 2014, Reykjavik, Iceland, April 22-25,
-  2014}, pp.~724--732, 2014.
+\begin{thebibliography}{}
 
 \end{thebibliography}
