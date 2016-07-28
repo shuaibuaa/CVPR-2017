@@ -23,11 +23,7 @@
 \section{Introduction}
 
 \subsection{Related Works}
-Wilson et al. combined the non-parametric flexibility of kernel methods with the structural properties of deep neural networks.
-
-%\cite{DBLP:conf/aistats/PandeyD14} 
-
-
+Wilson et al. \cite{DBLP:journals/corr/WilsonHSX15} combined the non-parametric flexibility of kernel methods with the structural properties of deep neural networks.
 
 %-------------------------------------------------------------------------
 \section{Methods}
@@ -53,7 +49,7 @@ E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^{N} {\|\mathbf{y}(\mathbf{x}_n, \mathbf{w
 \subsection{Kernelized Neural Network}
 
 %----------------------------------@ July 24---------------------------------------
-\color[rgb]{0.5,0.5,0.5}
+
 \newpage
 \LARGE Progress @ July 24\normalsize\vspace{3ex}
 
@@ -137,14 +133,14 @@ y_n = h^{(2)} \left( \sum\limits_{j=1}^K w_j^{(2)} k_2( \bm{\alpha}_j^{(2)}, \le
 \right])
 \right) 
 \end{equation}
-\color[rgb]{0,0,0}
+
 
 
 %----------------------------------@ July 26---------------------------------------
 \newpage
 \LARGE Progress @ July 26\normalsize\vspace{3ex}
 
-\par We aim to find a set of components $F = \{f_i\}_{i=1}^{K}$ which are fucntions in a RKHS $\mathcal{H}$ induced by a kernel function $k(\cdot, \cdot)$. Given $k(\cdot, \cdot)$ and the input space $\mathcal{X} = \mathbb{R}^D$, a reproducing kernel feature map $\phi: \mathcal{X}\rightarrow\mathbb{R}^\mathcal{X}$ can be defined as $\phi(\mathbf{x}) = k(\mathbf{x}, \cdot)$ and the inner product $\phi(\mathbf{x})^{T}\phi(\mathbf{y})$ can be computed as $k(\mathbf{x}, \mathbf{y})$ via the kernel trick.
+\par We aim to find a set of components $F = \{f_i\}_{i=1}^{K}$ which are fucntions in a RKHS $\mathcal{H}$ induced by a kernel function $k(\cdot, \cdot)$. Given $k(\cdot, \cdot)$ and the input space $\mathcal{X} = \mathbb{R}^D$, a reproducing kernel feature map \cite{scholkopf2002learning} $\phi: \mathcal{X}\rightarrow\mathbb{R}^\mathcal{X}$ can be defined as $\phi(\mathbf{x}) = k(\mathbf{x}, \cdot)$ and the inner product $\phi(\mathbf{x})^{T}\phi(\mathbf{y})$ can be computed as $k(\mathbf{x}, \mathbf{y})$ via the kernel trick.
 Firstly, we define the kernel neural network problem
 
 \begin{equation}
@@ -254,8 +250,50 @@ y = \sum\limits_{i=1}^K w_i^{(2)} f_i^{(2)}(\mathbf{x}^{(2)}) = \sum\limits_{i=1
   \right]
 \end{equation}
 
-%\newpage
-%\bibliographystyle{ieeetr}
-%\bibliography{mybibtex}
+
+
+%----------------------------------@ July 28---------------------------------------
+\newpage
+\LARGE Progress @ July 28\normalsize\vspace{3ex}
+
+\par Firstly, we define the kernel neural network problem:
+\color[rgb]{1,0,0}
+\begin{equation}
+  \min_{\{\mathbf{F}^{(i)} \subseteq{\mathcal{H}}\}_{i=1}^{m}} \sum_{n=1}^{N} \ell ( \{ f_{i^{(m)}}^{(m)} ( \{ f_{i^{(m-1)}}^{(m-1)} ( \cdots ( \{ f_{i^{(1)}}^{(1)}(\mathbf{x}_n) \}_{i^{(1)}=1}^{K^{(1)}} ) \cdots ) \}_{i^{(m-1)}=1}^{K^{(m-1)}} )\}_{i^{(m)}=1}^{K^{(m)}} )
+  - \lambda\Omega(\{\mathbf{F}^{(i)} \}_{i=1}^{m})
+\end{equation}
+\color[rgb]{0,0,0}
+
+\par \textbf{Parametric representation form}
+\begin{equation}
+\begin{split}
+  \min_{\{\mathbf{A}^{(i)}\}_{i=1}^{m}} \sum_{n=1}^{N} \ell ( \{ k^{(m)} (\mathbf{a}_{i^{(m)}}, \{ k^{(m-1)} (\mathbf{a}_{i^{(m-1)}}, \cdots \{ k^{(1)}(\mathbf{a}_{i^{(1)}}, \mathbf{x}_n) \}_{i^{(1)}=1}^{K^{(1)}} \cdots ) \}_{i^{(m-1)}=1}^{K^{(m-1)}} )\}_{i^{(m)}=1}^{K^{(m)}} )\\
+  - \lambda\Omega(\{\mathbf{A}^{(i)} \}_{i=1}^{m}, \{k^{(j)} \}_{j=1}^{m})
+\end{split}
+\end{equation}
+where $\mathbf{A}=\{\mathbf{a}_i\}_{i=1}^{K}$\\
+
+\par \textbf{Non-parametric representation form}
+\begin{equation}
+  \min_{\{\mathbf{r}^{(i)}\}_{i=1}^{m}} \sum_{n=1}^{N} \ell ( \{ \sum_{j^{(m)}=1}^{n} \alpha^{m}_{i^{(m)}j^{(m)}} k^{(m)} (\mathbf{x}_{j^{(m)}}^{(m)}, \mathbf{x}_{n}^{(m)})\}_{i^{(m)}=1}^{K^{(m)}} )
+  - \lambda\Omega(\{\mathbf{r}^{(i)} \}_{i=1}^{m}, \{k^{(j)} \}_{j=1}^{m})
+\end{equation}
+where $\mathbf{r}=\{\bm{\alpha}_i\}_{i=1}^{K}$ and:
+
+\begin{equation}
+\begin{split}
+\mathbf{x}_{j^{(m)}}^{(m)} &= \{  \sum_{j^{(m-1)}=1}^{N} \bm{\alpha}_{i^{(m-1)} j^{(m-1)}}^{(m-1)} k^{(m-1)} (x_{j^{(m-1)}}^{(m-1)}, x_{j^{(m)}}^{(m-1)}) \}_{i^{(m-1)}=1}^{k^{(m-1)}}\\
+&\cdot\\
+&\cdot\\
+&\cdot\\
+\mathbf{x}_{j^{(2)}}^{(2)} &= \{  \sum_{j^{(1)}=1}^{N} \bm{\alpha}_{i^{(1)} j^{(1)}}^{(1)} k^{(1)} (x_{j^{(1)}}^{(1)}, x_{j^{(2)}}^{(1)}) \}_{i^{(1)}=1}^{k^{(1)}}
+\end{split}
+\end{equation}
+
+
+
+\newpage
+\bibliographystyle{ieeetr}
+\bibliography{mybibtex}
 
 \end{document}

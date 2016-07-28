@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.21)  26 JUL 2016 00:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.7.28)  28 JUL 2016 14:46
 entering extended mode
 **C:/Users/Shuai/Documents/GitHub/CVPR-2017/progress/progress.tex
 (C:/Users/Shuai/Documents/GitHub/CVPR-2017/progress/progress.tex
@@ -230,7 +230,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(C:\Users\Shuai\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count103
 \scratchdimen=\dimen124
@@ -306,11 +306,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 25.
  [1
 
-{C:/Users/Shuai/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
@@ -323,44 +323,44 @@ Package epstopdf Info: Source file: <Non-para_single-layer.eps>
 (epstopdf)                    size: 46876 bytes
 (epstopdf)             Command: <epstopdf --outfile=Non-para_single-layer-eps-c
 onverted-to.pdf Non-para_single-layer.eps>
-(epstopdf)             \includegraphics on input line 66.
+(epstopdf)             \includegraphics on input line 62.
 Package epstopdf Info: Output file is already uptodate.
 <Non-para_single-layer-eps-converted-to.pdf, id=14, 367.3725pt x 313.17pt>
 File: Non-para_single-layer-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Non-para_single-layer-eps-converted-to.pdf>
 Package pdftex.def Info: Non-para_single-layer-eps-converted-to.pdf used on inp
-ut line 66.
+ut line 62.
 (pdftex.def)             Requested size: 233.6489pt x 199.16928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--76
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 Package epstopdf Info: Source file: <Non-para_muti-layer.eps>
-(epstopdf)                    date: 2016-07-24 00:59:58
-(epstopdf)                    size: 5188688 bytes
+(epstopdf)                    date: 2016-07-25 09:58:06
+(epstopdf)                    size: 5098223 bytes
 (epstopdf)             Output file: <Non-para_muti-layer-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-24 01:02:44
-(epstopdf)                    size: 48854 bytes
+(epstopdf)                    date: 2016-07-28 09:46:38
+(epstopdf)                    size: 48856 bytes
 (epstopdf)             Command: <epstopdf --outfile=Non-para_muti-layer-eps-con
 verted-to.pdf Non-para_muti-layer.eps>
-(epstopdf)             \includegraphics on input line 83.
+(epstopdf)             \includegraphics on input line 79.
 Package epstopdf Info: Output file is already uptodate.
 <Non-para_muti-layer-eps-converted-to.pdf, id=15, 705.63625pt x 313.17pt>
 File: Non-para_muti-layer-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Non-para_muti-layer-eps-converted-to.pdf>
 Package pdftex.def Info: Non-para_muti-layer-eps-converted-to.pdf used on input
- line 83.
+ line 79.
 (pdftex.def)             Requested size: 448.78467pt x 199.16928pt.
 
-Overfull \hbox (18.78004pt too wide) in paragraph at lines 83--84
+Overfull \hbox (18.78004pt too wide) in paragraph at lines 79--80
  [][] 
  []
 
@@ -368,12 +368,12 @@ Overfull \hbox (18.78004pt too wide) in paragraph at lines 83--84
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
 [2 <./Non-para_single-layer-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
@@ -385,23 +385,23 @@ Package epstopdf Info: Source file: <Para_single-layer.eps>
 (epstopdf)                    size: 44350 bytes
 (epstopdf)             Command: <epstopdf --outfile=Para_single-layer-eps-conve
 rted-to.pdf Para_single-layer.eps>
-(epstopdf)             \includegraphics on input line 110.
+(epstopdf)             \includegraphics on input line 106.
 Package epstopdf Info: Output file is already uptodate.
 <Para_single-layer-eps-converted-to.pdf, id=40, 285.065pt x 284.06125pt>
 File: Para_single-layer-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Para_single-layer-eps-converted-to.pdf>
 Package pdftex.def Info: Para_single-layer-eps-converted-to.pdf used on input l
-ine 110.
+ine 106.
 (pdftex.def)             Requested size: 199.87906pt x 199.16928pt.
  [3 <./Non-para_muti-layer-eps-converted-to.pdf> <./Para_single-layer-eps-conve
 rted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
@@ -413,50 +413,66 @@ Package epstopdf Info: Source file: <Para_muti-layer.eps>
 (epstopdf)                    size: 48283 bytes
 (epstopdf)             Command: <epstopdf --outfile=Para_muti-layer-eps-convert
 ed-to.pdf Para_muti-layer.eps>
-(epstopdf)             \includegraphics on input line 126.
+(epstopdf)             \includegraphics on input line 122.
 Package epstopdf Info: Output file is already uptodate.
 <Para_muti-layer-eps-converted-to.pdf, id=86, 537.00626pt x 311.1625pt>
 File: Para_muti-layer-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Para_muti-layer-eps-converted-to.pdf>
 Package pdftex.def Info: Para_muti-layer-eps-converted-to.pdf used on input lin
-e 126.
+e 122.
 (pdftex.def)             Requested size: 343.732pt x 199.16928pt.
  [4 <./Para_muti-layer-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
-[5] [6] (progress.aux) ) 
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 273--275
+
+ []
+
+[7] (progress.bbl
+Underfull \hbox (badness 2573) in paragraph at lines 4--6
+[]\OT1/ptm/m/n/10 A. G. Wil-son, Z. Hu, R. Salakhut-di-nov, and E. P. Xing, ``D
+eep ker-nel learn-ing,'' \OT1/ptm/m/it/10 CoRR\OT1/ptm/m/n/10 ,
+ []
+
+) [8] (progress.aux) ) 
 Here is how much of TeX's memory you used:
- 3150 strings out of 493335
- 43181 string characters out of 3136680
- 110903 words of memory out of 3000000
- 6575 multiletter control sequences out of 15000+200000
- 26639 words of font info for 77 fonts, out of 3000000 for 9000
+ 3159 strings out of 493335
+ 43279 string characters out of 3136680
+ 110909 words of memory out of 3000000
+ 6579 multiletter control sequences out of 15000+200000
+ 28323 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,26p,577b,234s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/font
-name/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cme
-x10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on progress.pdf (6 pages, 312083 bytes).
+ 40i,16n,26p,624b,232s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontna
+me/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
+x10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/urw/times/utmri8a.pfb>
+Output written on progress.pdf (8 pages, 364769 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
+ 186 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

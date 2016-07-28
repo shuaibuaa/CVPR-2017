@@ -1,3 +1,12 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{DBLP:journals/corr/WilsonHSX15}
+A.~G. Wilson, Z.~Hu, R.~Salakhutdinov, and E.~P. Xing, ``Deep kernel
+  learning,'' {\em CoRR}, vol.~abs/1511.02222, 2015.
+
+\bibitem{scholkopf2002learning}
+B.~Sch{\"o}lkopf and A.~J. Smola, {\em Learning with kernels: support vector
+  machines, regularization, optimization, and beyond}.
+\newblock MIT press, 2002.
 
 \end{thebibliography}
